@@ -1,2 +1,30 @@
-Please add your pseudocode to this file
+Please add your pseudocode to this file:
+
+BEGIN
+
+FUNCTION consecutiveSubstrings(string)
+
+    CREATE empty list result
+
+    FOR start = 0 TO length(string) - 1
+        FOR end = start + 1 TO length(string)
+            substring = substring(string, start, end)
+            ADD substring TO result
+        END FOR
+    END FOR
+
+    RETURN result
+
+END FUNCTION
+
+END
+
+
 And a written explanation of your solution
+This program generates all consecutive subtrings of a given string. It uses two nested loops to find every possible substring.The outer loop then selects the starting index of a substring, and then the inner loop selects the ending index. The subtring method is used to extract each consecutive subtring, followed by being stored in an array. The array is then returned after all the substrings have been generates.
+
+Input: 'abc'
+Output: ['a', 'ab', 'abc', 'b', 'bc', 'c']
+
+The time complexity is O(n^2), wheren is the length of the input string. The algorith uses two nested loops that iterate based on the length of the string to generate all possible consecutive substrings.
+The space complexity is O(n^2) because all generated substrings are stored in an array before being returned. s
